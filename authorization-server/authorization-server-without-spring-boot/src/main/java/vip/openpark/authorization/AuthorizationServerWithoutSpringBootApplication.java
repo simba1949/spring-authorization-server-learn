@@ -13,8 +13,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @since 2024/2/6 21:25
  */
 @SpringBootApplication
-public class AuthorizationServerApplication {
+public class AuthorizationServerWithoutSpringBootApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(AuthorizationServerApplication.class, args);
+		SpringApplication.run(AuthorizationServerWithoutSpringBootApplication.class, args);
 	}
 }
