@@ -5,7 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * <div>
- *     默认情况下，OAuth2AuthorizationServerConfiguration 为OAuth2授权服务器提供最小的默认配置
+ *     项目启动后，访问：
+ *     <a href="http://localhost:9000/.well-known/oauth-authorization-server"></a>
+ *     <a href="https://oauthdebugger.com/"></a>
  * </div>
  * @author anthony
  * @since 2024/2/6 21:25
