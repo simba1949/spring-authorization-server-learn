@@ -14,7 +14,7 @@
 
     <modules>
         <module>authorization-server-without-spring-boot</module>
-        <module>authorization-server-with-spring-boot</module>
+        <module>authorization-server-quick-start</module>
     </modules>
 
     <properties>
