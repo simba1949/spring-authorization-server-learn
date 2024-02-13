@@ -7,7 +7,7 @@
 
     <parent>
         <groupId>vip.openpark</groupId>
-        <artifactId>spring-authorization-server-learn</artifactId>
+        <artifactId>resource-server</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
