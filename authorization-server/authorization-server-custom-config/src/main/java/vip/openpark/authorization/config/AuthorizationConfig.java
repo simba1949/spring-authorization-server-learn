@@ -18,6 +18,8 @@ import java.util.List;
 public class AuthorizationConfig {
 	/**
 	 * 将自定义声明添加到JWT访问令牌
+	 * 参考链接：
+	 * <a href="https://docs.spring.io/spring-authorization-server/reference/guides/how-to-custom-claims-authorities.html#custom-claims">Customizing Tokens</a>
 	 *
 	 * @return OAuth2TokenCustomizer
 	 */
