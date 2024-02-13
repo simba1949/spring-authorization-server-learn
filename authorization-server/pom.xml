@@ -16,6 +16,7 @@
         <module>authorization-server-without-spring-boot</module>
         <module>authorization-server-quick-start</module>
         <module>authorization-server-custom-config</module>
+        <module>authorization-server-with-jpa</module>
     </modules>
 
     <properties>
