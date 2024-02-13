@@ -2,9 +2,9 @@ package vip.openpark.resource.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.oauth2.jwt.JwtDecoders;
 import org.springframework.security.web.SecurityFilterChain;
 
 /**
@@ -12,20 +12,26 @@ import org.springframework.security.web.SecurityFilterChain;
  * @since 2024/2/6 21:48
  */
 @EnableWebSecurity
-@Configuration(proxyBeanMethods = false)
+@Configuration
 public class ResourceServerConfig {
+	
 	@Bean
 	SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		http
-			.securityMatcher("/messages/**")
 			.authorizeHttpRequests(
 				authorizeHttpRequestsCustomizer ->
 					authorizeHttpRequestsCustomizer
-						.requestMatchers("/messages/**").hasAuthority("SCOPE_message")
+						.anyRequest().authenticated()
 			)
 			.oauth2ResourceServer(
 				oauth2ResourceServerCustomizer ->
-					oauth2ResourceServerCustomizer.jwt(Customizer.withDefaults())
+					oauth2ResourceServerCustomizer
+						.jwt(
+							jwtCustomizer ->
+								jwtCustomizer
+									// 设置jwt的issuer
+									.decoder(JwtDecoders.fromIssuerLocation("http://localhost:9000"))
+						)
 			);
 		return http.build();
 	}

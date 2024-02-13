@@ -8,8 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @since 2024/2/6 21:48
  */
 @SpringBootApplication
-public class ResourceServerApplication {
+public class ResourceServerQuickStartApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(ResourceServerApplication.class, args);
+		SpringApplication.run(ResourceServerQuickStartApplication.class, args);
 	}
 }
